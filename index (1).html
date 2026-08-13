@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>李澜新 · 招聘运营专业人士</title>
+<style>
+  :root{
+    --ink:#1c2430;
+    --paper:#f7f5f1;
+    --card:#ffffff;
+    --line:#e3ded4;
+    --accent:#5b6b52;   /* 沉静墨绿，专业而不冷硬 */
+    --accent-soft:#eef1ea;
+    --muted:#6b6f76;
+    --radius:10px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    line-height:1.6;
+  }
+  a{color:inherit;}
+
+  /* ---------- 顶部 ---------- */
+  header{
+    padding:72px 24px 56px;
+    text-align:center;
+    border-bottom:1px solid var(--line);
+    background:
+      radial-gradient(600px 200px at 50% -60px, var(--accent-soft), transparent 70%);
+  }
+  .avatar{
+    width:112px;height:112px;border-radius:50%;
+    margin:0 auto 20px;
+    overflow:hidden;
+    border:3px solid #fff;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+  }
+  .avatar img{
+    width:100%;height:100%;
+    object-fit:cover;
+    display:block;
+  }
+  header h1{
+    margin:0 0 6px;
+    font-size:clamp(26px,4vw,34px);
+    font-weight:700;
+    letter-spacing:0.5px;
+  }
+  header .role{
+    color:var(--accent);
+    font-size:16px;
+    font-weight:600;
+    margin-bottom:14px;
+  }
+  header .tagline{
+    max-width:560px;
+    margin:0 auto;
+    color:var(--muted);
+    font-size:15px;
+  }
+  .contact-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    justify-content:center;
+    margin-top:26px;
+  }
+  .contact-row a{
+    text-decoration:none;
+    font-size:14px;
+    padding:8px 16px;
+    border:1px solid var(--line);
+    border-radius:999px;
+    background:var(--card);
+    transition:border-color .15s, transform .15s;
+  }
+  .contact-row a:hover{
+    border-color:var(--accent);
+    transform:translateY(-1px);
+  }
+  .contact-row .contact-item{
+    font-size:14px;
+    padding:8px 16px;
+    border:1px solid var(--line);
+    border-radius:999px;
+    background:var(--card);
+    color:var(--muted);
+  }
+
+  /* ---------- 主体 ---------- */
+  main{
+    max-width:760px;
+    margin:0 auto;
+    padding:56px 24px 80px;
+  }
+  section{margin-bottom:52px;}
+  section:last-child{margin-bottom:0;}
+  .eyebrow{
+    font-size:12px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--accent);
+    font-weight:700;
+    margin-bottom:10px;
+  }
+  h2{
+    font-size:20px;
+    margin:0 0 18px;
+    font-weight:700;
+  }
+  p{color:#333;font-size:15px;}
+
+  /* 技能标签 */
+  .tags{display:flex;flex-wrap:wrap;gap:10px;}
+  .tags span{
+    background:var(--accent-soft);
+    color:var(--accent);
+    padding:7px 14px;
+    border-radius:8px;
+    font-size:13.5px;
+    font-weight:600;
+  }
+
+  /* 经历卡片 */
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:20px 22px;
+    margin-bottom:14px;
+  }
+  .card-head{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:6px;
+    margin-bottom:6px;
+  }
+  .card-head .title{font-weight:700;font-size:15.5px;}
+  .card-head .period{color:var(--muted);font-size:13px;white-space:nowrap;}
+  .card .org{color:var(--accent);font-size:14px;font-weight:600;margin-bottom:8px;}
+  .card ul{margin:8px 0 0;padding-left:18px;color:#333;font-size:14.5px;}
+  .card li{margin-bottom:4px;}
+
+  /* 教育 / 认证 */
+  .simple-list{list-style:none;padding:0;margin:0;}
+  .simple-list li{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:6px;
+    padding:12px 0;
+    border-bottom:1px solid var(--line);
+    font-size:14.5px;
+  }
+  .simple-list li:last-child{border-bottom:none;}
+  .simple-list .muted{color:var(--muted);font-size:13px;}
+
+  footer{
+    text-align:center;
+    padding:28px 24px 40px;
+    color:var(--muted);
+    font-size:13px;
+  }
+
+  @media (max-width:600px){
+    header{padding:56px 18px 40px;}
+    main{padding:40px 18px 60px;}
+    .card-head{flex-direction:column;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="avatar"><img src="photo.jpg" alt="李澜新"></div>
+  <h1>李澜新</h1>
+  <div class="role">京东零售 · 招聘运营</div>
+  <p class="tagline">
+    专注招聘运营领域，深耕汽车与零售行业人才获取，擅长招聘流程优化与效率提升。
+  </p>
+  <div class="contact-row">
+    <a href="mailto:lilanxinyeah@163.com">✉️ lilanxinyeah@163.com</a>
+    <span class="contact-item">💬 微信 Darling5li</span>
+    <a href="https://github.com/Lanxin-Lee" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</header>
+
+<main>
+
+  <section id="about">
+    <div class="eyebrow">关于我</div>
+    <h2>个人简介</h2>
+    <p>
+      招聘运营方向从业者，先后就职于理想汽车、京东零售，专注于招聘流程管理与效率优化。
+      跨学科背景（英语&市场营销本科、外国语言学及应用语言学研究生）让我在候选人沟通、
+      招聘渠道运营与数据化招聘管理上有独特视角。
+    </p>
+  </section>
+
+  <section id="skills">
+    <div class="eyebrow">专业技能</div>
+    <h2>核心能力</h2>
+    <div class="tags">
+      <span>招聘运营</span>
+      <span>招聘渠道管理</span>
+      <span>招聘流程优化</span>
+      <span>数据化招聘</span>
+      <span>候选人体验</span>
+      <span>跨部门协作</span>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="eyebrow">工作经历</div>
+    <h2>职业历程</h2>
+
+    <div class="card">
+      <div class="card-head">
+        <span class="title">招聘运营</span>
+        <span class="period">2024 — 至今</span>
+      </div>
+      <div class="org">京东零售</div>
+      <ul>
+        <li>负责招聘运营相关工作，支持零售业务线人才招募</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <span class="title">招聘运营</span>
+        <span class="period">2021 — 2024</span>
+      </div>
+      <div class="org">理想汽车</div>
+      <ul>
+        <li>负责招聘运营相关工作，支持公司业务扩张期人才获取</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="eyebrow">教育背景 · 资质认证</div>
+    <h2>学历与证书</h2>
+    <ul class="simple-list">
+      <li>
+        <span>对外经济贸易大学 · 外国语言学及应用语言学 · 研究生</span>
+        <span class="muted">2019 — 2021</span>
+      </li>
+      <li>
+        <span>太原理工大学 · 英语 & 市场营销 · 本科</span>
+        <span class="muted">2015 — 2019</span>
+      </li>
+      <li>
+        <span>英语专业八级</span>
+      </li>
+      <li>
+        <span>国际英语人才考试高端</span>
+      </li>
+      <li>
+        <span>笔译三级</span>
+      </li>
+      <li>
+        <span>领英中国人才认证招聘官</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <div class="eyebrow">联系方式</div>
+    <h2>期待与你连接</h2>
+    <p>
+      欢迎通过邮箱或微信与我联系，探讨招聘合作、职业发展或其他相关话题。
+    </p>
+    <div class="contact-row" style="justify-content:flex-start;">
+      <a href="mailto:lilanxinyeah@163.com">✉️ lilanxinyeah@163.com</a>
+      <span class="contact-item">💬 微信 Darling5li</span>
+      <a href="https://github.com/Lanxin-Lee" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © 2026 李澜新 · 本页面使用纯 HTML/CSS 构建
+</footer>
+
+</body>
+</html>
